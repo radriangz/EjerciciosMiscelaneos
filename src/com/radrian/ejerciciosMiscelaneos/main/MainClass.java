@@ -2,6 +2,7 @@ package com.radrian.ejerciciosMiscelaneos.main;
 
 import javax.swing.JOptionPane;
 
+import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCinco;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCuatro;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioDos;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioTres;
@@ -25,8 +26,8 @@ public class MainClass {
 		/*
 		 * Usar JOptionPane para que el usuario escoja el no. del ejercicio
 		 * correspondiente e ingrese los valores.
-		 * */
-		byte inputUsuario = 4;
+		 */
+		byte inputUsuario = 5;
 		float valorA = 1.5f;
 		float valorB = 2.5f;
 		String nombreUsuario = "Adrian";
@@ -42,13 +43,14 @@ public class MainClass {
 		} else if (inputUsuario == 3) {
 			EjercicioTres ejercicio3 = new EjercicioTres();
 			ejercicio3.metodoEjercicioTres(nombreUsuario);
-			
+
 		} else if (inputUsuario == 4) {
 			EjercicioCuatro ejercicio4 = new EjercicioCuatro();
 			ejercicio4.metodoEjercicio();
-			
+
 		} else if (inputUsuario == 5) {
-			
+			EjercicioCinco ejercicio5 = new EjercicioCinco();
+			ejercicio5.calcularAreaCirculo();
 		}
 	}
 
