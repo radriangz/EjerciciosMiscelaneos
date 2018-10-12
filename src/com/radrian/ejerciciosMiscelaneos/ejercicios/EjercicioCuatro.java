@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class EjercicioCuatro {
 	
-	public void metodoEjercicio() {
+	public void metodoEjercicioCuatro() {
 		
 		String userName = JOptionPane.showInputDialog("Introduce tu nombre de Usuario");
 		if (userName != null) {
