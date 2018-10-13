@@ -1,7 +1,5 @@
 package com.radrian.ejerciciosMiscelaneos.main;
 
-import javax.swing.JOptionPane;
-
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCinco;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCuatro;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioDos;
@@ -47,7 +45,7 @@ public class MainClass {
 			ejercicio03.metodoEjercicioTres(nombreUsuario);
 
 		} else if (inputUsuario == 4) {
-			EjercicioCuatro ejercicio04 = new EjercicioCuatro();
+			EjercicioCuatro ejercicio04 = new EjercicioCuatro();	
 			ejercicio04.metodoEjercicioCuatro();
 
 		} else if (inputUsuario == 5) {
