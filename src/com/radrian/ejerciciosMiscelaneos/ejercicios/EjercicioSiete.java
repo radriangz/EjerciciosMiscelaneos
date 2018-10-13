@@ -12,20 +12,44 @@ import javax.swing.JOptionPane;
  */
 public class EjercicioSiete {
 
-	public void metodoEjercicioSiete() {
+//	public void metodoEjercicioSiete() {
+//		final byte MINIMO_ASCCI_IMPRIMIBLE = 32;
+//		final byte MAXIMO_ASCII_IMPRIMIBLE = 126;
+//
+//		boolean invalidNum = true;
+//
+//		while (invalidNum) {
+//			int userInputNumber = Integer.parseInt(JOptionPane.showInputDialog("Ingresa un número del 0 al 127"));
+//
+//			if (userInputNumber >= MINIMO_ASCCI_IMPRIMIBLE && userInputNumber <= MAXIMO_ASCII_IMPRIMIBLE) {
+//				invalidNum = false;
+//				JOptionPane.showMessageDialog(null, new Character((char) userInputNumber), "Resultado",
+//						JOptionPane.INFORMATION_MESSAGE);
+//			} else {
+//				JOptionPane.showInternalMessageDialog(null, "Caracter no imprimible", "Error",
+//						JOptionPane.ERROR_MESSAGE);
+//			}
+//		}
+//	}
+	
+	public void metodoEjercicioSieteDos() {
+		final byte MINIMO_ASCCI_IMPRIMIBLE = 32;
+		final byte MAXIMO_ASCII_IMPRIMIBLE = 126;
 
-		int userInputNumber = Integer.parseInt(JOptionPane.showInputDialog("Ingresa un número del 0 al 127"));
 		boolean invalidNum = true;
-		
-		if (userInputNumber > 32 && userInputNumber < 127) {
-			JOptionPane.showM //(null, System.out.println((char) userInputNumber), messageType);;
-		} 
-		
-		while (invalidNum == true) {
-			JOptionPane.showInternalMessageDialog(null, "Caracter no imprimible", "Error", JOptionPane.ERROR_MESSAGE);
-			
-		}
 
+		while (invalidNum) {
+			int userInputNumber = Integer.parseInt(JOptionPane.showInputDialog("Ingresa un número del 0 al 127"));
+
+			if (userInputNumber >= MINIMO_ASCCI_IMPRIMIBLE && userInputNumber <= MAXIMO_ASCII_IMPRIMIBLE) {
+				invalidNum = false;
+				JOptionPane.showMessageDialog(null, new Character((char) userInputNumber), "Resultado",
+						JOptionPane.INFORMATION_MESSAGE);
+			} else {
+				JOptionPane.showInternalMessageDialog(null, "Caracter no imprimible", "Error",
+						JOptionPane.ERROR_MESSAGE);
+			}
+		}
 	}
 
 }
