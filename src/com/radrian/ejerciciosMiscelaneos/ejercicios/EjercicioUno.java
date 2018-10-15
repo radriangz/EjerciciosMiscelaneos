@@ -10,46 +10,83 @@ import javax.swing.JOptionPane;
  * @author RAdrian
  *
  */
-public class EjercicioUno {
+public class EjercicioUno implements IEjercicio {
 
 	private float valorA;
 	private float valorB;
 
+	/**
+	 * Permite capturar los valores iniciales para ejecutar este programa
+	 */
 	public void input() {
-		boolean isValorACapturado = false;
-		boolean isValorBCapturado = false;
-
-		while (!isValorACapturado && !isValorBCapturado) {
-			isValorACapturado = capturaValorA();
-		}
+		valorA = capturaValor("Operando uno: ", "Operando uno");
+		valorB = capturaValor("Operando dos: ", "Operando dos");
 	}
 
-	private boolean capturaValorA() {
-		Float input = capturaValor();
+	private float capturaValor(String mensaje, String titulo) {
+		boolean isValueCaptured = false;
+		float input = 0.0f;
 
-		if (input != null) {
-			valorA = input;
-			return true;
-		}
-		return false;
-	}
-
-	private float capturaValor() {
-		Float input = null;
-		try {
-			input = Float.parseFloat(
-					JOptionPane.showInputDialog(null, "Operando uno:", "Operando uno", JOptionPane.PLAIN_MESSAGE));
-		} catch (NumberFormatException e) {
-
+		while (!isValueCaptured) { //o sea "mientras isValueCaptured no sea veardadero, entra al ciclo,"
+			try {
+				input = Float.parseFloat(JOptionPane.showInputDialog(null, "Introduce un número para el operando", "Captura de operando", JOptionPane.PLAIN_MESSAGE));
+				isValueCaptured = true;
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Su respuesta es inválida", "Error", JOptionPane.ERROR_MESSAGE);
+				isValueCaptured = false;
+			}
 		}
 
 		return input;
 	}
 
-	public void metodoEjercicio(float valorA, float valorB) {
-		System.out.println("Suma: " + (valorA + valorB));
-		System.out.println("Resta: " + (valorA - valorB));
-		System.out.println("división: " + (valorA / valorB));
-		System.out.println("Módulo: " + (valorA % valorB));
+	private float calcularSuma() {
+		return valorA + valorB;
+	}
+
+	private float calcularResta() {
+		return valorA - valorB;
+	}
+
+	private Float calcularDivision() {
+		Float resultado = null;
+
+		try {
+			resultado = valorA / valorB;
+		} catch (ArithmeticException e) {
+			System.out.println("Error al dividir");
+		}
+
+		return Float.isInfinite(resultado) ? null : resultado;
+	}
+
+	private Float calcularModulo() {
+		Float resultado = null;
+
+		try {
+			resultado = valorA % valorB;
+		} catch (ArithmeticException e) {
+			System.out.println("Error al obtener el módulo");
+		}
+
+		return Float.isNaN(resultado) ? null : resultado;
+	}
+
+	/**
+	 * Muestra los valores resultantes de ejeuctar este programa
+	 */
+	public void output() {
+		StringBuilder mensaje = new StringBuilder();
+
+		mensaje.append("Suma: ").append(calcularSuma()).append("\n");
+		mensaje.append("Resta: ").append(calcularResta()).append("\n");
+
+		Float division = calcularDivision();
+		mensaje.append("División: ").append(division != null ? division : "Hubo un error al dividir").append("\n");
+
+		Float modulo = calcularModulo();
+		mensaje.append("Módulo: ").append(modulo != null ? modulo : "Hubo un error obener el módulo").append("\n");
+
+		JOptionPane.showMessageDialog(null, mensaje.toString(), "Resultado", JOptionPane.INFORMATION_MESSAGE);
 	}
 }

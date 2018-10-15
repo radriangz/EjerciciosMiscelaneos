@@ -35,6 +35,7 @@ public class MainClass {
 		if (inputUsuario == 1) {
 			EjercicioUno ejercicio01 = new EjercicioUno();
 			ejercicio01.input();
+			ejercicio01.output();
 
 		} else if (inputUsuario == 2) {
 			EjercicioDos ejercicio02 = new EjercicioDos();
