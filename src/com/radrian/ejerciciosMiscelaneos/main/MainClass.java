@@ -27,9 +27,7 @@ public class MainClass {
 		 * Usar JOptionPane para que el usuario escoja el no. del ejercicio
 		 * correspondiente e ingrese los valores.
 		 */
-		byte inputUsuario = 1;
-		float valorA = 1.5f;
-		float valorB = 2.5f;
+		byte inputUsuario = 2;
 		String nombreUsuario = "Adrian";
 
 		if (inputUsuario == 1) {
@@ -39,7 +37,8 @@ public class MainClass {
 
 		} else if (inputUsuario == 2) {
 			EjercicioDos ejercicio02 = new EjercicioDos();
-			ejercicio02.metodoEjercicioDos(valorA, valorB);
+			ejercicio02.input();
+			ejercicio02.output();
 
 		} else if (inputUsuario == 3) {
 			EjercicioTres ejercicio03 = new EjercicioTres();

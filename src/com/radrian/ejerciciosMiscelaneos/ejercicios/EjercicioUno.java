@@ -15,14 +15,17 @@ public class EjercicioUno implements IEjercicio {
 	private float valorA;
 	private float valorB;
 
-	/**
-	 * Permite capturar los valores iniciales para ejecutar este programa
-	 */
+
+	@Override
 	public void input() {
 		valorA = capturaValor("Operando uno: ", "Operando uno");
 		valorB = capturaValor("Operando dos: ", "Operando dos");
 	}
-
+	
+	/***
+	 * El método {@link capturaValor} se encarga de capturar un valor válido
+	 * para realizar las operaciones necesarias.
+	 */
 	private float capturaValor(String mensaje, String titulo) {
 		boolean isValueCaptured = false;
 		float input = 0.0f;
@@ -72,9 +75,7 @@ public class EjercicioUno implements IEjercicio {
 		return Float.isNaN(resultado) ? null : resultado;
 	}
 
-	/**
-	 * Muestra los valores resultantes de ejeuctar este programa
-	 */
+	@Override
 	public void output() {
 		StringBuilder mensaje = new StringBuilder();
 
