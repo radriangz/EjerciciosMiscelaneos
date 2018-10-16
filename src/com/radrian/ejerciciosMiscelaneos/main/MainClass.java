@@ -1,8 +1,11 @@
 package com.radrian.ejerciciosMiscelaneos.main;
 
+import java.util.Scanner;
+
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCinco;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCuatro;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioDos;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioOcho;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioSeis;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioSiete;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioTres;
@@ -16,18 +19,24 @@ import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioUno;
  */
 public class MainClass {
 
+	static Scanner scan = new Scanner(System.in);
+	
 	/**
 	 * Método Principal
 	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
 		/* TODO
 		 * Usar JOptionPane para que el usuario escoja el no. del ejercicio
 		 * correspondiente e ingrese los valores.
 		 */
-		byte inputUsuario = 2;
+		System.out.println(": : : Ejercicios Varios de Java : : :");
+		System.out.println("Ingresa un número del 1 al XX"); //actualizar conforme salgan los ejercicios
+		byte inputUsuario = scan.nextByte();
+		//byte inputUsuario = 2;
+		//Se cambió inputUsuario por el nextByte() de scan
+		
 		String nombreUsuario = "Adrian";
 
 		if (inputUsuario == 1) {
@@ -60,6 +69,9 @@ public class MainClass {
 			EjercicioSiete ejercicio07 = new EjercicioSiete();
 			ejercicio07.metodoEjercicioSiete();
 			
+		} else if (inputUsuario == 8) {
+			EjercicioOcho ejercicio08 = new EjercicioOcho();
+			ejercicio08.metodoEjercicioOcho();
 		}
 		
 	}
