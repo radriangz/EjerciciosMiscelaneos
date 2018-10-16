@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCinco;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioCuatro;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioDos;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioNueve;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioOcho;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioSeis;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.EjercicioSiete;
@@ -72,8 +73,12 @@ public class MainClass {
 		} else if (inputUsuario == 8) {
 			EjercicioOcho ejercicio08 = new EjercicioOcho();
 			ejercicio08.metodoEjercicioOcho();
+		} else if (inputUsuario == 9) {
+			EjercicioNueve ejercicio09 = new EjercicioNueve();
+			ejercicio09.metodoEjercicioNueve();
 		}
 		
-	}
+		
+	} //scan.close();
 
 }
