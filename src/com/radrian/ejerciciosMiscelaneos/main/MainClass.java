@@ -11,6 +11,9 @@ import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio20;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio21;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio22;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio23;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio24;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio25;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio26;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio16;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio17;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio10;
@@ -34,7 +37,8 @@ import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio01;
  */
 public class MainClass {
 
-	static Scanner scan = new Scanner(System.in);
+	private static Scanner scan = new Scanner(System.in);
+
 	
 	/**
 	 * Método Principal
@@ -151,7 +155,7 @@ public class MainClass {
 		} else if (inputUsuario == 24) {
 			Ejercicio24 ejercicio24 = new Ejercicio24();
 			ejercicio24.metodo();
-			/*
+			
 		} else if (inputUsuario == 25) {
 			Ejercicio25 ejercicio25 = new Ejercicio25();
 			ejercicio25.metodo();
@@ -163,7 +167,7 @@ public class MainClass {
 		} else if (inputUsuario == 27) {
 			Ejercicio27 ejercicio27 = new Ejercicio27();
 			ejercicio27.metodo();
-			
+			/*
 		}  else if (inputUsuario == 28) {
 			Ejercicio28 ejercicio28 = new Ejercicio28();
 			ejercicio28.metodo();
@@ -179,12 +183,11 @@ public class MainClass {
 		} else if (inputUsuario == 31) {
 			Ejercicio31 ejercicio31 = new Ejercicio31();
 			ejercicio31.metodo();
-			
-		}
 			*/
+		}
 		
-		
-		
-	} //scan.close();
-
+		scan.close();
+	}
+	
 }
+

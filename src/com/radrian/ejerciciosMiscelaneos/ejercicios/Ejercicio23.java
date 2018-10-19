@@ -14,25 +14,20 @@ public class Ejercicio23 {
 
 		String line = "La lluvia en Sevilla es una maravilla.";
 		char chr = 'e';
-		boolean isDone = false;
 
-		System.out.println("Ingrese cualquier dato con el teclado para comenzar.");
+		// System.out.println("Ingrese cualquier dato con el teclado para comenzar.");
 		Scanner sc = new Scanner(System.in);
 
 		if (sc.hasNextLine()) {
-			do {
-				line = replaceChar(line, chr);
-				isDone = true;
-			} while (!isDone);
-
-			System.out.println(line);
+			System.out.println(replaceChar(line, chr));
+		} else {
+			System.out.println("false");
 		}
 		sc.close();
 
 	}
 
 	private String replaceChar(String str, char chr) {
-
 		char[] chArr = str.toCharArray();
 
 		for (byte i = 0; i < chArr.length; ++i) {
