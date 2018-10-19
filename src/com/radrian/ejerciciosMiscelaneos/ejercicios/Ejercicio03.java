@@ -7,7 +7,7 @@ package com.radrian.ejerciciosMiscelaneos.ejercicios;
  * 
  * @author RAdrian
  */
-public class EjercicioTres {
+public class Ejercicio03 {
 	public void metodoEjercicioTres(String nombreUsuario) {
 		if (nombreUsuario != null) {
 			System.out.println("Bienvenido " + nombreUsuario);

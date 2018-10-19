@@ -12,7 +12,7 @@ import interfaces.IEjercicio;
  * @author RAdrian
  *
  */
-public class EjercicioUno implements IEjercicio {
+public class Ejercicio01 implements IEjercicio {
 
 	private float valorA;
 	private float valorB;
@@ -22,7 +22,7 @@ public class EjercicioUno implements IEjercicio {
 	 * cada clase debe tener un método de entrada, el comportamiento de input varía 
 	 * según los requerimientos del ejercicio.
 	 * 
-	 * Para {@link EjercicioUno} input utiliza el método {@link capturaValor} para asignar el resultado a
+	 * Para {@link Ejercicio01} input utiliza el método {@link capturaValor} para asignar el resultado a
 	 * las variables valorA y valorB.
 	 * 
 	 * */
@@ -115,7 +115,7 @@ public class EjercicioUno implements IEjercicio {
 	 * cada clase debe tener un método de salida, el comportamiento de output varía según los requerimientos 
 	 * del ejercicio.
 	 * 
-	 * Para {@link EjercicioUno} output crea un string usando StringBuilder, realiza el cálculo, y devuelve
+	 * Para {@link Ejercicio01} output crea un string usando StringBuilder, realiza el cálculo, y devuelve
 	 * al usuario el resultado mediante una ventana de JOptionPane, ya sea que el resultado se haya obtenido
 	 * sin problemas o haya ocurrido un error. 
 	 * 

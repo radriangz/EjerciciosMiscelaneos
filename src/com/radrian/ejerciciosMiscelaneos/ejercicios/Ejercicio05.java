@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author RAdrian
  *
  */
-public class EjercicioCinco {
+public class Ejercicio05 {
 
 	public void calcularAreaCirculo() {
 		String userInputRadius = JOptionPane.showInputDialog("Para calcular el área de un círculo, introduce el radio");

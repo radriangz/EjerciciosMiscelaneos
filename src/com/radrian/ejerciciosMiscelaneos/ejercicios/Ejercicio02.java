@@ -15,7 +15,7 @@ import interfaces.IEjercicio;
  * @author RAdrian
  *
  */
-public class EjercicioDos implements IEjercicio {
+public class Ejercicio02 implements IEjercicio {
 
 	private float valueA;
 	private float valueB;
@@ -79,7 +79,7 @@ public class EjercicioDos implements IEjercicio {
 	 * cada clase debe tener un método de salida, el comportamiento de output varía según los requerimientos 
 	 * del ejercicio.
 	 * 
-	 * Para {@link EjercicioDos} output usa un try, para realizar la comparación entre valorA y valorB,
+	 * Para {@link Ejercicio02} output usa un try, para realizar la comparación entre valorA y valorB,
 	 * mostrando en pantalla una ventana de confirmación de JOptionPane con el resultado de la comparación,
 	 * tiene además un catch que captura errores.
 	 *  

@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author RAdrian
  *
  */
-public class EjercicioCuatro {
+public class Ejercicio04 {
 	
 	public void metodoEjercicioCuatro() {
 		

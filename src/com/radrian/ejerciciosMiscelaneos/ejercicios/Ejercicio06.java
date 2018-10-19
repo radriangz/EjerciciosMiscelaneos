@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * @author RAdrian
  *
  */
-public class EjercicioSeis {
+public class Ejercicio06 {
 
 	public void metodoEjercicioSeis() {
 		String userInputNumber = JOptionPane.showInputDialog("Ingresa un número");
