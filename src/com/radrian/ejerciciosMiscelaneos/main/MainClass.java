@@ -14,6 +14,10 @@ import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio23;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio24;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio25;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio26;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio27;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio28;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio29;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio30;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio16;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio17;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio10;
@@ -167,7 +171,7 @@ public class MainClass {
 		} else if (inputUsuario == 27) {
 			Ejercicio27 ejercicio27 = new Ejercicio27();
 			ejercicio27.metodo();
-			/*
+			
 		}  else if (inputUsuario == 28) {
 			Ejercicio28 ejercicio28 = new Ejercicio28();
 			ejercicio28.metodo();
@@ -179,7 +183,7 @@ public class MainClass {
 		} else if (inputUsuario == 30) {
 			Ejercicio30 ejercicio30 = new Ejercicio30();
 			ejercicio30.metodo();
-			
+			/*
 		} else if (inputUsuario == 31) {
 			Ejercicio31 ejercicio31 = new Ejercicio31();
 			ejercicio31.metodo();
