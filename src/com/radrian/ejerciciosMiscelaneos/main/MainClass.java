@@ -18,6 +18,11 @@ import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio27;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio28;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio29;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio30;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio31;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio32;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio33;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio34;
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio35;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio16;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio17;
 import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio10;
@@ -183,10 +188,43 @@ public class MainClass {
 		} else if (inputUsuario == 30) {
 			Ejercicio30 ejercicio30 = new Ejercicio30();
 			ejercicio30.metodo();
-			/*
+			
 		} else if (inputUsuario == 31) {
 			Ejercicio31 ejercicio31 = new Ejercicio31();
 			ejercicio31.metodo();
+			
+		} else if (inputUsuario == 32) {
+			Ejercicio32 ejercicio32 = new Ejercicio32();
+			ejercicio32.metodo();
+			
+		} else if (inputUsuario == 33) {
+			Ejercicio33 ejercicio33 = new Ejercicio33();
+			ejercicio33.metodo();
+			
+		} else if (inputUsuario == 34) {
+			Ejercicio34 ejercicio34 = new Ejercicio34();
+			ejercicio34.metodo();
+			
+		} else if (inputUsuario == 35) {
+			Ejercicio35 ejercicio35 = new Ejercicio35();
+			ejercicio35.metodo();
+			/*
+		} else if (inputUsuario == 36) {
+			Ejercicio36 ejercicio36 = new Ejercicio36();
+			ejercicio36.metodo();
+			
+		} else if (inputUsuario == 37) {
+			Ejercicio37 ejercicio31 = new Ejercicio31();
+			ejercicio31.metodo();
+			
+		} else if (inputUsuario == 38) {
+			Ejercicio38 ejercicio38 = new Ejercicio38();
+			ejercicio38.metodo();
+			
+		} else if (inputUsuario == 39) {
+			Ejercicio39 ejercicio39 = new Ejercicio39();
+			ejercicio39.metodo();
+
 			*/
 		}
 		
