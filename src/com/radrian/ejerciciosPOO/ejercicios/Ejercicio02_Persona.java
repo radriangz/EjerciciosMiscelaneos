@@ -43,14 +43,15 @@ package com.radrian.ejerciciosPOO.ejercicios;
  * 
  * * Ahora, crea una clase ejecutable que haga lo siguiente:
  * 
- * * Pide por teclado el nombre, la edad, sexo, peso y altura. * Crea 3 objetos
- * de la clase anterior, el primer objeto obtendrá las anteriores variables
- * pedidas por teclado, el segundo objeto obtendrá todos los anteriores menos el
- * peso y la altura y el último por defecto, para este último utiliza los
- * métodos set para darle a los atributos un valor. * Para cada objeto, deberá
- * comprobar si esta en su peso ideal, tiene sobrepeso o por debajo de su peso
- * ideal con un mensaje. * Indicar para cada objeto si es mayor de edad. * Por
- * último, mostrar la información de cada objeto.
+ * 		Pide por teclado el nombre, la edad, sexo, peso y altura. 
+ * 		Crea 3 objetos de la clase anterior, el primer objeto obtendrá las 
+ * anteriores variables pedidas por teclado, el segundo objeto obtendrá todos 
+ * los anteriores menos el peso y la altura y el último por defecto, para este último utiliza los
+ * métodos set para darle a los atributos un valor.
+ * 		Para cada objeto, deberá comprobar si esta en su peso ideal, tiene sobrepeso 
+ * o por debajo de su peso ideal con un mensaje. 
+ *  	Indicar para cada objeto si es mayor de edad. 
+ *		Por último, mostrar la información de cada objeto.
  * 
  * Puedes usar métodos en la clase ejecutable, para que os sea mas fácil.
  * 
@@ -64,7 +65,7 @@ public class Ejercicio02_Persona {
 	private String dni = ""; //cómo puedo dejar dni declarada sin inicializar?
 	private char sexo = HOMBRE;
 	private float peso = 0f;
-	private float altura = 0f;
+	private int altura = 0;
 
 	public byte calcularIMC() {
 		final byte BAJO_PESO = -1;
@@ -74,7 +75,7 @@ public class Ejercicio02_Persona {
 
 		if (this.peso / (this.altura * this.altura) < 20) {
 			imc = BAJO_PESO;
-		} else if (this.peso / (this.altura * this.altura) >= 20 || this.peso / (this.altura * this.altura) <= 25) {
+		} else if ((this.peso / (this.altura * this.altura)) >= 20 || (this.peso / (this.altura * this.altura)) <= 25) {
 			imc = PESO_NORMAL;
 		} else {
 			imc = SOBREPESO;
@@ -91,9 +92,9 @@ public class Ejercicio02_Persona {
 		return esMayorDeEdad;
 	}
 
-	public char comprobarSexo(char sexo) {
-		if (sexo ==  'M') {
-			this.sexo = 'M';
+	public char comprobarSexo() {
+		if (this.sexo ==  'M') {
+			return this.sexo;
 		} else {
 			this.sexo = HOMBRE;
 		}
@@ -123,25 +124,25 @@ public class Ejercicio02_Persona {
 		this.nombre = "";
 		this.edad = 0;
 		this.dni = generaDNI();
-		this.sexo = comprobarSexo(sexo);
+		this.sexo = HOMBRE;
 		this.peso = 0f;
-		this.altura = 0f;		
+		this.altura = 0;		
 	}
 
 	public Ejercicio02_Persona(String nombre, byte edad, char sexo) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dni = generaDNI();
-		this.sexo = comprobarSexo(sexo);
+		this.sexo = sexo;
 		this.peso = 0f;
-		this.altura = 0f;		
+		this.altura = 0;		
 	}
 
-	public Ejercicio02_Persona(String nombre, byte edad, String dni, char sexo, float peso, float altura) {
+	public Ejercicio02_Persona(String nombre, byte edad, char sexo, float peso, int altura) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dni = generaDNI();
-		this.sexo = comprobarSexo(sexo);
+		this.sexo = sexo;
 		this.peso = peso;
 		this.altura = altura;
 	}
@@ -152,17 +153,18 @@ public class Ejercicio02_Persona {
 
 	public void setEdad(byte edad) {
 		this.edad = edad;
+		
 	}
 
 	public void setSexo(char sexo) {
-		this.sexo = comprobarSexo(sexo);
+		this.sexo = comprobarSexo();
 	}
 
 	public void setPeso(float peso) {
 		this.peso = peso;
 	}
 
-	public void setAltura(float altura) {
+	public void setAltura(int altura) {
 		this.altura = altura;
 	}
 }

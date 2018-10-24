@@ -3,13 +3,16 @@
  */
 package com.radrian.ejerciciosPOO.main;
 
+import java.util.Scanner;
 import com.radrian.ejerciciosPOO.ejercicios.Ejercicio01_Cuenta;
+import com.radrian.ejerciciosPOO.ejercicios.Ejercicio02;
 
 /**
  * @author RAdrian
  *
  */
 public class MainClassPOO {
+	private static Scanner scan = new Scanner(System.in);
 
 	/**
 	 * @param args
@@ -29,7 +32,17 @@ public class MainClassPOO {
 		System.out.println("Su saldo actual es de: " + 
 							cuenta.getCantidad());
 		*/
+		System.out.println(": : : Ejercicios de POO Java : : :");
+		System.out.println("Ingresa un número del 1 al 17"); //actualizar conforme salgan los ejercicios
+		byte inputUsuario = scan.nextByte();
 		
+		if(inputUsuario == 1) {
+			//Ejercicio 01
+		} else if(inputUsuario == 2) {
+			Ejercicio02 ejercicioPOO02 = new Ejercicio02();
+			ejercicioPOO02.metodo();
+		}
+
 		
 	}
 
