@@ -24,22 +24,20 @@ package com.radrian.ejerciciosPOO.ejercicios;
  */
 public class Ejercicio01_Cuenta {
 	private String titular;
-	private float cantidad;
+	private double cantidad;
 	
-	public void sumaIngreso(float cantidad) {
-		float comprobacion = this.cantidad;
-		if ((comprobacion + cantidad) < this.cantidad) {
+	public void ingresar(double cantidad) {
+		if ((this.cantidad + cantidad) < this.cantidad) {
 			System.out.println("El saldo no ha cambiado");
 		} else {
 			this.cantidad += cantidad;
 		}
 	}
 	
-	public void restaRetiro (float cantidad) {
-		float comprobacion = this.cantidad;
-		if ((comprobacion - cantidad) <0) {
+	public void retirar (double cantidad) {
+		if ((this.cantidad - cantidad) <0) {
 			this.cantidad = 0f;
-		} else if ((comprobacion - cantidad) > this.cantidad){
+		} else if ((this.cantidad - cantidad) > this.cantidad){
 			System.out.println("El saldo no ha cambiado");
 		} else {
 			this.cantidad -= cantidad;
@@ -56,17 +54,21 @@ public class Ejercicio01_Cuenta {
 		this.cantidad = 0.0f;
 	}
 	
+	public Ejercicio01_Cuenta(String titular, double cantidad) {
+		this.titular = titular;
+		this.cantidad = 0.0f;
+	}
+	
 	public String getTitular() {
 		return titular;
 	}
 	public void setTitular(String titular) {
 		this.titular = titular;
 	}
-	
-	public float getCantidad() {
+	public double getCantidad() {
 		return cantidad;
 	}
-	public void setCantidad(float cantidad) {
+	public void setCantidad(double cantidad) {
 		this.cantidad = cantidad;
 	}
 }
