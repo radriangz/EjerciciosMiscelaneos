@@ -16,7 +16,7 @@ public class MainClassPOO {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 //* Ejercicio 1
+		 /* Ejercicio 1
 		
 		Ejercicio01_Cuenta cuenta = new Ejercicio01_Cuenta("Radrian");
 		cuenta.setCantidad(100f);
@@ -28,7 +28,9 @@ public class MainClassPOO {
 		cuenta.retirar(75.30d);
 		System.out.println("Su saldo actual es de: " + 
 							cuenta.getCantidad());
-		/**/
+		*/
+		
+		
 	}
 
 }
