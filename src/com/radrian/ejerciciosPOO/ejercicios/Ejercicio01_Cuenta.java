@@ -13,7 +13,9 @@ package com.radrian.ejerciciosPOO.ejercicios;
  * Tendrá dos métodos especiales:
  * 
  * ingresar(double cantidad): se ingresa una cantidad a la cuenta, si la
- * cantidad introducida es negativa, no se hará nada. retirar(double cantidad):
+ * cantidad introducida es negativa, no se hará nada. 
+ * 
+ * retirar(double cantidad):
  * se retira una cantidad a la cuenta, si restando la cantidad actual a la que
  * nos pasan es negativa, la cantidad de la cuenta pasa a ser 0.
  * 
@@ -24,37 +26,53 @@ public class Ejercicio01_Cuenta {
 	private String titular;
 	private double cantidad;
 
-	public void ingresar(double cantidad) {
-		if (cantidad <= 0) {
-			System.out.println("El saldo no ha cambiado");
-		} else {
-			this.cantidad += cantidad;
-		}
-	}
-
-	public void retirar (double cantidad) {
-		if (cantidad <= 0) {
-			System.out.println("El saldo no ha cambiado");
-		} else if ((this.cantidad - cantidad) <0) { 
-			this.cantidad = 0f;
-		}else {
-			this.cantidad -= cantidad;
-		}
-	}
-
-	public Ejercicio01_Cuenta() {
-		this.titular = "";
-		this.cantidad = 0.0f;
-	}
-
+	/**
+	 * {@link Ejercicio01_Cuenta(String titular)} 
+	 * Constructor con solamente el titular.
+	 * */
 	public Ejercicio01_Cuenta(String titular) {
 		this.titular = titular;
 		this.cantidad = 0.0f;
 	}
-
+	
+	//Se eliminó el constructor por default.
+	
+	/**
+	 * {@link Ejercicio01_Cuenta(String titular, double cantidad)} 
+	 * Constructor con ambos parámetros, titular y cantidad.
+	 * */
 	public Ejercicio01_Cuenta(String titular, double cantidad) {
 		this.titular = titular;
-		this.cantidad = 0.0f;
+		this.cantidad = cantidad;//Ya se usa cantidad en el constructor
+	}
+	
+	/**
+	 * {@link ingresar(double cantidad)}
+	 * Suma ingreso a cantidad, si cantidad es negativo, no hace nada.
+	 * */
+	public void ingresar(double ingreso) {
+		if (ingreso <= 0) {
+			System.out.println("El saldo no ha cambiado");
+		} else {
+			this.cantidad += ingreso;
+		}
+	}
+
+	/**
+	 * {@link egreso()} 
+	 * Evalúa que egreso sea una cantidad válida: Si tiene signo negativo,
+	 * no hace nada, si cantidad resulta en un número negativo, asigna 0 a 
+	 * cantidad, si no se da algun caso anterior, entonces resta egreso a
+	 * cantidad y asigna el resultado de la operación a cantidad.
+	 * */
+	public void retirar(double egreso) {
+		if (egreso <= 0) {
+			System.out.println("El saldo no ha cambiado");
+		} else if ((this.cantidad - egreso) <0) { 
+			this.cantidad = 0f;
+		}else {
+			this.cantidad -= egreso;
+		}
 	}
 
 	public String getTitular() {
@@ -71,5 +89,17 @@ public class Ejercicio01_Cuenta {
 
 	public void setCantidad(double cantidad) {
 		this.cantidad = cantidad;
+	}
+	
+	//toString creado.
+	/**
+	 * {@link toString()}
+	 * Es un overrride de la superclase, devuelve un string con 
+	 * usuario y cantidad.
+	 * */
+	@Override
+	public String toString() {
+		return "Usuario: " + titular + ".\n" +
+				"Saldo en cuenta: " + cantidad;
 	}
 }

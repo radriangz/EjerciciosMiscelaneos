@@ -5,7 +5,7 @@ package com.radrian.ejerciciosMiscelaneos.ejercicios;
 
 import javax.swing.JOptionPane;
 
-import interfaces.IEjercicio;
+import com.radrian.ejerciciosEjercicios.interfaces.IEjercicio;
 
 /**
  * Ejercicio 2) Declara 2 variables numéricas (con el valor que desees), e

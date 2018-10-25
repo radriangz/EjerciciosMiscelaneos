@@ -1,7 +1,7 @@
 /**
  * 
  */
-package interfaces;
+package com.radrian.ejerciciosEjercicios.interfaces;
 
 /**
  * @author RAdrian
