@@ -62,4 +62,15 @@ public class Ejercicio03_Password {
 		Random rand = new Random();
 		return mayusAlpabet.charAt(rand.nextInt(mayusAlpabet.length()));
 	}
+	
+	public void setContraseña(String str) {
+		this.contraseña = str;
+	}
+	public String getContraseña() {
+		return this.contraseña;
+	}
+	public void setLongitud(byte longitud) {
+		this.longitud = longitud;
+	}
+
 }
