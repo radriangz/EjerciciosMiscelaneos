@@ -50,39 +50,16 @@ public class Ejercicio03_Password {
 	}
 
 	public void generarContraseña(byte longitud) {
-		byte minus = 1;
-		byte mayus = 2;
-		byte numeros = 5;
 		StringBuilder str = new StringBuilder();
-
 		for (byte i = 0; i<longitud ; i++) {
-			for (byte j = 0; j < minus; j++) {
-				str.append(randomMinus());
-			}
-			for (byte k = 0; k < mayus; k++) {
-				str.append(randomMayus());
-			}
-			for (byte l = 0; l < numeros; l++) {
-				str.append(randomNumber());
-			}
+				str.append(randomChar());
 		}
 		this.contraseña = str.toString();
 	}
 	
-	private byte randomNumber() {
-		Random rand = new Random();
-		return (byte) rand.nextInt(9);// 
-	}
-
-	private char randomMayus() {
-		String mayusAlpabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private char randomChar() {
+		String mayusAlpabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstucwxyz012345678901234567890123456789";
 		Random rand = new Random();
 		return mayusAlpabet.charAt(rand.nextInt(mayusAlpabet.length()));
-	}
-	
-	private char randomMinus() {
-		String minusAlpabet = "abcdefghijklmnopqrstucwxyz";
-		Random rand = new Random();
-		return minusAlpabet.charAt(rand.nextInt(minusAlpabet.length()));
 	}
 }
