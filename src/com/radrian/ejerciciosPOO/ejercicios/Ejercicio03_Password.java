@@ -28,25 +28,25 @@ public class Ejercicio03_Password {
 		this.contraseña = contraseña;
 	}
 
-	public boolean checarContraseña(String contraseña) {
+	public boolean esFuerte() {
 		byte minus = 0;
 		byte mayus = 0;
 		byte numeros = 0;
-		char[] arr = contraseña.toCharArray();
+		char[] arr = this.contraseña.toCharArray();
 		for (int i = 0; i < arr.length; i++) {
 			if (Character.isUpperCase(arr[i])) {
 				mayus++;
 			} else if (Character.isLowerCase(arr[i])) {
 				minus++;
-			} else {
+			} else if(Character.isDigit(arr[i])) {
 				numeros++;
 			}
 		}
-		return esFuerte(minus, mayus, numeros);
+		return comprobarContraseña(minus, mayus, numeros);
 
 	}
 
-	private boolean esFuerte(byte minus, byte mayus, byte numeros) {
+	private boolean comprobarContraseña(byte minus, byte mayus, byte numeros) {
 		if (minus >= 1 && mayus >= 2 && numeros >= 5) {
 			return true;
 		} else {
@@ -71,8 +71,8 @@ public class Ejercicio03_Password {
 	public void setContraseña(String str) {
 		this.contraseña = str;
 	}
-	public String getContraseña() {
-		return this.contraseña;
+	public byte getLongitud() {
+		return this.longitud;
 	}
 	public void setLongitud(byte longt) {
 		this.longitud = longt;
