@@ -14,11 +14,16 @@ public class Ejercicio03_Password {
 	private String contraseña;
 
 	public Ejercicio03_Password() {
-
+		this.contraseña = generarContraseña(this.longitud);
 	}
-
+	
+	public Ejercicio03_Password(byte longitud) {
+		this.longitud = longitud;
+		this.contraseña = generarContraseña(longitud);
+	}
+	
 	public Ejercicio03_Password(byte longitud, String contraseña) {
-		super();
+		//super();
 		this.longitud = longitud;
 		this.contraseña = contraseña;
 	}
@@ -28,7 +33,7 @@ public class Ejercicio03_Password {
 		byte mayus = 0;
 		byte numeros = 0;
 		char[] arr = contraseña.toCharArray();
-		for (int i = 0; i <= arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			if (Character.isUpperCase(arr[i])) {
 				mayus++;
 			} else if (Character.isLowerCase(arr[i])) {
@@ -49,12 +54,12 @@ public class Ejercicio03_Password {
 		}
 	}
 
-	public void generarContraseña(byte longitud) {
+	public String generarContraseña(byte longitud) {
 		StringBuilder str = new StringBuilder();
 		for (byte i = 0; i<longitud ; i++) {
 				str.append(randomChar());
 		}
-		this.contraseña = str.toString();
+		return str.toString();
 	}
 	
 	private char randomChar() {
@@ -69,8 +74,8 @@ public class Ejercicio03_Password {
 	public String getContraseña() {
 		return this.contraseña;
 	}
-	public void setLongitud(byte longitud) {
-		this.longitud = longitud;
+	public void setLongitud(byte longt) {
+		this.longitud = longt;
 	}
 
 }

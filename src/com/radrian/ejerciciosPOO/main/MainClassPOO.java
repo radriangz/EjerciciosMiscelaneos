@@ -4,8 +4,11 @@
 package com.radrian.ejerciciosPOO.main;
 
 import java.util.Scanner;
+
+import com.radrian.ejerciciosMiscelaneos.ejercicios.Ejercicio03;
 import com.radrian.ejerciciosPOO.ejercicios.Ejercicio01_Cuenta;
 import com.radrian.ejerciciosPOO.ejercicios.Ejercicio02;
+import com.radrian.ejerciciosPOO.ejercicios.Ejercicio03POO;
 
 /**
  * @author RAdrian
@@ -41,6 +44,11 @@ public class MainClassPOO {
 		} else if(inputUsuario == 2) {
 			Ejercicio02 ejercicioPOO02 = new Ejercicio02();
 			ejercicioPOO02.metodo();
+			
+		} else if(inputUsuario == 3) {
+			Ejercicio03POO ejercicioPOO03 = new Ejercicio03POO();
+			ejercicioPOO03.metodo();
+			
 		}
 
 		
