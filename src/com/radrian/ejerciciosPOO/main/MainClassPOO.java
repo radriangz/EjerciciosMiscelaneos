@@ -49,6 +49,10 @@ public class MainClassPOO {
 			Ejercicio03POO ejercicioPOO03 = new Ejercicio03POO();
 			ejercicioPOO03.metodo();
 			
+		} else if(inputUsuario == 4) {
+			Ejercicio04POO ejercicioPOO04 = new Ejercicio04POO();
+			ejercicioPOO04.metodo();
+			
 		}
 
 		
