@@ -1,4 +1,4 @@
-package com.radrian.ejerciciosPOO.ejercicios;
+package com.radrian.ejerciciosPOO.ejercicio03;
 
 import java.util.Scanner;
 
@@ -36,14 +36,14 @@ import java.util.Scanner;
  * @author RAdrian
  *
  */
-public class Ejercicio03POO {
+public class Ejercicio03 {
 
 	public void metodo() {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println(
 				"Ejercicio 03. Cuentas y Contraseñas.\n" + "Para crear las cuentas, ingresa un número entre 5 y 10.");
-		Ejercicio03_Password[] arrayDePasswords = new Ejercicio03_Password[sc.nextInt()];
+		Password[] arrayDePasswords = new Password[sc.nextInt()];
 
 		System.out.println("Ingresa un número entre 8 y 15, para la longitud de la contraseña");
 		byte longitud = sc.nextByte();
@@ -54,7 +54,7 @@ public class Ejercicio03POO {
 
 		if (scan) {
 			for (int i = 0; i < arrayDePasswords.length; i++) {
-				Ejercicio03_Password pass = new Ejercicio03_Password(longitud);
+				Password pass = new Password(longitud);
 				
 				arrayDePasswords[i] = pass;
 				passwordFuerza[i] = arrayDePasswords[i].esFuerte();

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.radrian.ejerciciosPOO.ejercicios;
+package com.radrian.ejerciciosPOO.ejercicio03;
 
 import java.util.Random;
 
@@ -9,20 +9,20 @@ import java.util.Random;
  * @author RAdrian
  *
  */
-public class Ejercicio03_Password {
+public class Password {
 	private byte longitud = 8;
 	private String contraseña;
 
-	public Ejercicio03_Password() {
+	public Password() {
 		this.contraseña = generarContraseña(this.longitud);
 	}
 	
-	public Ejercicio03_Password(byte longitud) {
+	public Password(byte longitud) {
 		this.longitud = longitud;
 		this.contraseña = generarContraseña(longitud);
 	}
 	
-	public Ejercicio03_Password(byte longitud, String contraseña) {
+	public Password(byte longitud, String contraseña) {
 		//super();
 		this.longitud = longitud;
 		this.contraseña = contraseña;

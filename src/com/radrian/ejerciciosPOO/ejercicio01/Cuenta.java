@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.radrian.ejerciciosPOO.ejercicios;
+package com.radrian.ejerciciosPOO.ejercicio01;
 
 /**
  * Ejercicio 1) Crea una clase llamada Cuenta que tendrá los siguientes
@@ -22,7 +22,7 @@ package com.radrian.ejerciciosPOO.ejercicios;
  * @author RAdrian
  *
  */
-public class Ejercicio01_Cuenta {
+public class Cuenta {
 	private String titular;
 	private double cantidad;
 
@@ -30,7 +30,7 @@ public class Ejercicio01_Cuenta {
 	 * {@link Ejercicio01_Cuenta(String titular)} 
 	 * Constructor con solamente el titular.
 	 * */
-	public Ejercicio01_Cuenta(String titular) {
+	public Cuenta(String titular) {
 		this.titular = titular;
 		this.cantidad = 0.0f;
 	}
@@ -41,7 +41,7 @@ public class Ejercicio01_Cuenta {
 	 * {@link Ejercicio01_Cuenta(String titular, double cantidad)} 
 	 * Constructor con ambos parámetros, titular y cantidad.
 	 * */
-	public Ejercicio01_Cuenta(String titular, double cantidad) {
+	public Cuenta(String titular, double cantidad) {
 		this.titular = titular;
 		this.cantidad = cantidad;//Ya se usa cantidad en el constructor
 	}

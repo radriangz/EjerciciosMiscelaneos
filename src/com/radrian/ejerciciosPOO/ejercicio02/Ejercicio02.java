@@ -1,4 +1,4 @@
-package com.radrian.ejerciciosPOO.ejercicios;
+package com.radrian.ejerciciosPOO.ejercicio02;
 
 import java.util.Scanner;
 
@@ -68,7 +68,7 @@ public class Ejercicio02 {
 		int userInput = Integer.parseInt(sc.nextLine());
 
 		if (userInput == 1) {
-			Ejercicio02_Persona usuario01 = usuarioCompleto();
+			Persona usuario01 = usuarioCompleto();
 			System.out.println("Peso del usuario: " + usuario01.calcularIMC());
 			System.out.println("Mayoría de edad: " + usuario01.esMayorDeEdad());
 			System.out.println("Datos del usuario: \n" + usuario01.toString());
@@ -79,7 +79,7 @@ public class Ejercicio02 {
 		sc.close();
 	}
 
-	private Ejercicio02_Persona usuarioCompleto() {
+	private Persona usuarioCompleto() {
 		String nombre;
 		byte edad;
 		char sexo;
@@ -98,7 +98,7 @@ public class Ejercicio02 {
 		System.out.println("Altura del usuario en cm.");
 		altura = Integer.parseInt(sc.nextLine());
 
-		Ejercicio02_Persona uCompleto = new Ejercicio02_Persona(nombre, edad, sexo, peso, altura);
+		Persona uCompleto = new Persona(nombre, edad, sexo, peso, altura);
 		sc.close();
 		return uCompleto;
 	}

@@ -1,12 +1,12 @@
-package com.radrian.ejerciciosPOO.ejercicios;
+package com.radrian.ejerciciosPOO.ejercicio02;
 
 /**
- * {@link Ejercicio02_Persona}
+ * {@link Persona}
  * Contiene los métodos establecidos en las instrucciones del ejercicio 2.
  * 
  * @author RAdrian
  * */
-public class Ejercicio02_Persona {
+public class Persona {
 	private final char HOMBRE = 'H';
 	private final char MUJER = 'M';
 
@@ -17,19 +17,19 @@ public class Ejercicio02_Persona {
 	private float peso = 0f;
 	private int altura = 0;
 	
-	public Ejercicio02_Persona() {
+	public Persona() {
 		this.sexo = HOMBRE;
 		this.dni = generaDNI();
 	}
 
-	public Ejercicio02_Persona(String nombre, byte edad, char sexo) {
+	public Persona(String nombre, byte edad, char sexo) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dni = generaDNI();
 		this.sexo = comprobarSexo(sexo);
 	}
 
-	public Ejercicio02_Persona(String nombre, byte edad, char sexo, float peso, int altura) {
+	public Persona(String nombre, byte edad, char sexo, float peso, int altura) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dni = generaDNI(); 
