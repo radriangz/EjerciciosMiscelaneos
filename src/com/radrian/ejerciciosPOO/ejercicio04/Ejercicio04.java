@@ -10,7 +10,6 @@ public class Ejercicio04 {
 		float precioTVs = 0;
 		float precioLavadoras = 0;
 		float precioTotal = 0;
-		Television tvComparacion = new Television();
 		Electrodomestico[] arrayDeElectrodomesticos = new Electrodomestico[10];
 
 		for (int i = 0; i < arrayDeElectrodomesticos.length; i++) {
