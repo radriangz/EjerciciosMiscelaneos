@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.radrian.ejerciciosPOO.ejercicio01.Cuenta;
 import com.radrian.ejerciciosPOO.ejercicio02.Ejercicio02;
 import com.radrian.ejerciciosPOO.ejercicio03.Ejercicio03;
+import com.radrian.ejerciciosPOO.ejercicio04.Ejercicio04;
 
 /**
  * @author RAdrian
@@ -39,8 +40,8 @@ public class MainClassPOO {
 			ejercicioPOO03.metodo();
 
 		} else if(inputUsuario == 4) {
-//			Electrodomesticos ejercicioPOO04 = new Electrodomesticos();
-//			ejercicioPOO04.metodo();
+			Ejercicio04 ejercicio04 = new Ejercicio04();
+			ejercicio04.metodo();
 			
 		}
 
