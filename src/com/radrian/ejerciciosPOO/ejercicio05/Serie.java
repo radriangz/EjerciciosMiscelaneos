@@ -6,7 +6,7 @@ import com.radrian.ejercicios.Uitl.Utilidades;
  * @author RAdrian
  *
  */
-public class Serie implements Entregable {
+public class Serie implements Entregable, Comparable<Serie> {
 	String titulo;
 	byte numeroDeTemporada = 3;
 	boolean isEntregado = false;
@@ -46,11 +46,11 @@ public class Serie implements Entregable {
 	
 	public int compareTo(Serie serieAComparar) {
 		if (this.numeroDeTemporada < serieAComparar.numeroDeTemporada) {
-			return -1;
+			return 1;
 		} else if (this.numeroDeTemporada == serieAComparar.numeroDeTemporada) {
-			return 1;
+			return 0;
 		} else {
-			return 1;
+			return -1;
 		}
 	}
 

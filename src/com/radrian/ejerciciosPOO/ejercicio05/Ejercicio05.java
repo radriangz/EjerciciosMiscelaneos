@@ -1,6 +1,7 @@
 package com.radrian.ejerciciosPOO.ejercicio05;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.radrian.ejercicios.Uitl.Utilidades;
@@ -44,11 +45,8 @@ public class Ejercicio05 {
 				seriesSinEntregar++;
 			}
 		}
-//		List<Serie> seriesList = Arrays.asList(arrayDeSeries);
-//		List<Videojuego> videojuegosList = Arrays.asList(arrayDeVideojuegos);
-//		//Collections.sort((List) seriesList);
-//		Collections.sort((List) listDeSeries);
-//		Collections.sort((List)listDeVideojuegos);
+		Collections.sort(listDeSeries);
+		Collections.sort(listDeVideojuegos);;
 		
 		System.out.println("Videojuego con más horas estimadas:" + listDeVideojuegos.get(0).toString() + "\n");
 		System.out.println("Serie con más temporadas:" + listDeSeries.get(0).toString());
@@ -58,13 +56,13 @@ public class Ejercicio05 {
 				"\nSeries entregadas: " + seriesEntregadas + 
 				"\nSeries por entregar: " + seriesSinEntregar + "\n");
 		
-		for (Serie serie : listDeSeries) {
-			System.out.println("temporadas: " + serie.getNumeroDeTemporada());
-		}
-		System.out.println();
-		for (Videojuego videojuego : listDeVideojuegos) {
-			System.out.println("número de horas: " + videojuego.horasEstimadas);
-		}
+//		for (Serie serie : listDeSeries) {
+//			System.out.println("temporadas: " + serie.getNumeroDeTemporada());
+//		}
+//		System.out.println();
+//		for (Videojuego videojuego : listDeVideojuegos) {
+//			System.out.println("número de horas: " + videojuego.horasEstimadas);
+//		}
 	}
 
 }

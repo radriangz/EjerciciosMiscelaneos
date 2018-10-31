@@ -9,7 +9,7 @@ import com.radrian.ejercicios.Uitl.Utilidades;
  * @author RAdrian
  *
  */
-public class Videojuego implements Entregable {
+public class Videojuego implements Entregable, Comparable<Videojuego> {
 	String titulo;
 	int horasEstimadas = 10;
 	boolean isEntregado = false;
@@ -47,11 +47,11 @@ public class Videojuego implements Entregable {
 	
 	public int compareTo(Videojuego videojuegoAComparar) {
 		if (this.horasEstimadas < videojuegoAComparar.horasEstimadas) {
-			return -1;
+			return 1;
 		} else if (this.horasEstimadas == videojuegoAComparar.horasEstimadas) {
-			return 1;
+			return 0;
 		} else {
-			return 1;
+			return -1;
 		}
 	}
 	
