@@ -129,7 +129,7 @@ public class Electrodomestico {
 	protected static String generateRandomColour() {
 		Random randomInt = new Random();
 		String[] colours = {"blanco", "negro", "rojo", "azul", "gris"};
-		return colours[randomInt.nextInt(colours.length)];
+		return colours[randomInt.nextInt(colours.length-1)];
 	}
 	
 	protected static char generateRandomConsumoEnergetico() {
