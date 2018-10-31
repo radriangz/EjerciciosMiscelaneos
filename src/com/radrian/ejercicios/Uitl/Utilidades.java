@@ -15,26 +15,24 @@ public class Utilidades {
 	 * selected.
 	 */
 	public static char generateRandomChar(String stringDeChars) {
-		Random rand = new Random();
-		return stringDeChars.charAt(rand.nextInt(stringDeChars.length()));
+		return stringDeChars.charAt(random.nextInt(stringDeChars.length()));
 	}
 
 	/**
-	 * {@link generateRamdomFloat(byte a, byte b)} Returns a float. Receives
+	 * {@link generateRamdomFloat(int a, int b)} Returns a float. Receives
 	 * parameter (byte a), wich is the amount of digits before the decimal point,
 	 * and parameter (byte b) wich are the amount of decimal digits.
 	 */
-	public static float generateRamdomFloat(byte a, byte b) {
+	public static float generateRamdomFloat(int a, int b) {
 		StringBuilder stringToFloat = new StringBuilder();
-		Random randomInt = new Random();
 
 		for (int i = 0; i < (a + b); i++) {
 			if (i < a) {
-				stringToFloat.append(randomInt.nextInt(10));
+				stringToFloat.append(random.nextInt(10));
 			} else if (i == a) {
 				stringToFloat.append(".");
 			} else {
-				stringToFloat.append(randomInt.nextInt(10));
+				stringToFloat.append(random.nextInt(10));
 			}
 		}
 		return Float.parseFloat(stringToFloat.toString());
@@ -45,8 +43,7 @@ public class Utilidades {
 	 * returns an item in the (i) position. (i) is pseudorandomly selected.
 	 */
 	public static String getRandomString(String[] arrayOfStrings) {
-		Random randomInt = new Random();
-		return (arrayOfStrings[randomInt.nextInt(arrayOfStrings.length)]);
+		return (arrayOfStrings[random.nextInt(arrayOfStrings.length)]);
 	}
 
 	/**
@@ -54,9 +51,7 @@ public class Utilidades {
 	 * to determine it.
 	 */
 	public static boolean generateRandomBoolean() {
-		boolean[] booleanArray = { true, false };
-		Random randomInt = new Random();
-		return booleanArray[randomInt.nextInt(booleanArray.length)];
+		return random.nextBoolean();
 	}
 
 	/**
@@ -67,12 +62,11 @@ public class Utilidades {
 	 * decimalValue) indicating the amount of decimal digits.
 	 */
 	public static float generateRandomFloatFromInterval(int maxValue, int minValue, byte decimalDigits) {
-		Random randomInt = new Random();
-		StringBuilder stringToFloat = new StringBuilder().append((randomInt.nextInt(maxValue - minValue) + minValue))
+		StringBuilder stringToFloat = new StringBuilder().append((random.nextInt(maxValue - minValue) + minValue))
 				.append(".");
 
 		for (byte i = 0; i < decimalDigits; i++) {
-			stringToFloat.append(randomInt.nextInt(9));
+			stringToFloat.append(random.nextInt(9));
 		}
 
 		return Float.parseFloat(stringToFloat.toString());
@@ -83,8 +77,7 @@ public class Utilidades {
 	 * 
 	 * Returns a byte from 0 to one number before (byte a)
 	 */
-	public static byte generateRandomByte(byte a) {
-		// Random random = new Random();
+	public static byte generateRandomByte(int a) {
 		return (byte) random.nextInt(a);
 	}
 
@@ -94,8 +87,16 @@ public class Utilidades {
 	 * Returns a int value from 0 to one number before (int number)
 	 */
 	public static int generateRandomInt(int number) {
-		// Random random = new Random();
 		return random.nextInt(number);
+	}
+	
+	/**
+	 * {@link generateRandomInt(int maxNumber, int minNumber)}
+	 * 
+	 * Returns a random int value from the minNumber to maxNumber.
+	 */
+	public static int generateRandomInt(int maxNumber, int minNumber) {
+		return (random.nextInt(maxNumber - minNumber) + minNumber);
 	}
 
 	/**
@@ -115,7 +116,7 @@ public class Utilidades {
 	}
 
 	/**
-	 * {@link generateRandomLoremIpsumString()}
+	 * {@link generateRandomTitle()}
 	 * 
 	 * Creates a title using random words from the first paragraph of Lorem Ipsum.
 	 * Fist letter is mayus. The amount of words is defined by (byte wordsInTitle).
@@ -143,4 +144,18 @@ public class Utilidades {
 		newWord.setCharAt(0, Character.toUpperCase(newWord.charAt(0)));
 		return newWord.toString();
 	}
+	
+	/**
+	 * {@link generateRandomName()}
+	 * Generates a string with a complete name (randomName + randomLastName).
+	 * */
+	public static String generateRandomName() {
+		String[] randomName = {"Aceituno", "Aguinaldo", "All Power", "Anivdelarev", "Batman", "Benefecia", "Burger King",
+				"Cacerolo",	"Calzón", "Caraciola", "Caralampio", "Cesárea", "Cheyenne", "Christmas Day", "Circunsición", 
+				"Culebro", "Delgadina", "Diodoro", "Email"};
+		String[] randomLastName = {"Colina", "Meza", "López", "Tirado", "González", "Piña", "Colomo", "Rayos", "Robles", "Celebre",
+				"Corona", "Tarro", "Galleta", "Estrella", "Sugar", "Universe"};
+		return (Utilidades.getRandomString(randomName) + " " + Utilidades.getRandomString(randomLastName)); 
+	}
+	
 }

@@ -44,16 +44,6 @@ public class Serie implements Entregable, Comparable<Serie> {
 		return Utilidades.getRandomString(randomGenero);
 	}
 	
-	public int compareTo(Serie serieAComparar) {
-		if (this.numeroDeTemporada < serieAComparar.numeroDeTemporada) {
-			return 1;
-		} else if (this.numeroDeTemporada == serieAComparar.numeroDeTemporada) {
-			return 0;
-		} else {
-			return -1;
-		}
-	}
-
 	public String getTitulo() {
 		return titulo;
 	}
@@ -112,6 +102,17 @@ public class Serie implements Entregable, Comparable<Serie> {
 				"\nCreador: " + creador + 
 				"\nNo. de Temporadas: " + numeroDeTemporada +
 				"\nGénero: " + genero);
+	}
+	
+	@Override
+	public int compareTo(Serie serieAComparar) {
+		if (this.numeroDeTemporada < serieAComparar.numeroDeTemporada) {
+			return 1;
+		} else if (this.numeroDeTemporada == serieAComparar.numeroDeTemporada) {
+			return 0;
+		} else {
+			return -1;
+		}
 	}
 
 }
