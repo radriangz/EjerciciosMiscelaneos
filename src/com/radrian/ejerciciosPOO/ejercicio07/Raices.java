@@ -14,7 +14,7 @@ public class Raices {
 		this.b = c;
 	}
 
-//	(-bÂ±âˆš((b^2)-(4*a*c)))/(2*a)
+//	(-b±((b^2)-(4*a*c)))/(2*a)
 	
 	/**
 	 * When called, this method prints in console wether the ecuation has one, two,
@@ -41,7 +41,7 @@ public class Raices {
 	}
 
 	/**
-	 * Calculates the discriminante [âˆš((b^2)-(4*a*c))].
+	 * Calculates the discriminante [((b^2)-(4*a*c))].
 	 */
 	private float calcDiscriminante() {
 		discriminante = (float) Math.pow(((b * b)- ((a * c) * 4)), 0.5); //(Math.pow(b, b)) 
@@ -53,7 +53,7 @@ public class Raices {
 	 * Calculates the value of x1. Uses the positive discriminante
 	 */
 	private float calcX1(float negB) {
-		x1 = (negB + (float) (discriminante)) / (a * 2);
+		x1 = (negB + (float) (discriminante)) / (b * 2);
 		return x1;
 	}
 
@@ -81,10 +81,10 @@ public class Raices {
 	 */
 	public void printRaiz() {
 		if (hasRaiz()) {
-			System.out.println("Solo tiene una soluciÃ³n.\n" + 
+			System.out.println("Solo tiene una solución.\n" + 
 					"x1: " + String.valueOf(x1) + "x2: " + String.valueOf(x2));
 		} else {
-			System.out.println("La ecuaciÃ³n no tiene soluciÃ³n real.");
+			System.out.println("La ecuación no tiene solución real.");
 		}
 	}
 
