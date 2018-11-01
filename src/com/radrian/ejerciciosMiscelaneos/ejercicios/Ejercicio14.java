@@ -18,8 +18,7 @@ public class Ejercicio14 {
 
 	public void metodoEjercicioCatorce() {
 
-		System.out
-				.println("\nResolución de ecuación de segundo grado." + "\n" + "Ingresa un valor numérico para \'a\'");
+		System.out.println("\nResolución de ecuación de segundo grado." + "\n" + "Ingresa un valor numérico para \'a\'");
 		Scanner sc = new Scanner(System.in);
 
 		float valorA = Float.parseFloat(sc.nextLine());
@@ -34,9 +33,9 @@ public class Ejercicio14 {
 		float valorC = Float.parseFloat(sc.nextLine());
 
 		float negB = valorB * -1f;
-		float sqB = valorB * valorB;
+		float squareRootB = (float) Math.pow(valorB, valorB);//valorB * valorB;
 		float valor4ac = (valorA * valorC) * 4;
-		float b24ac = (sqB - valor4ac);
+		float b24ac = (squareRootB - valor4ac);
 		double raiz = Math.pow(b24ac, 0.5);
 
 		float valorX1 = (negB + (float) (raiz)) / (valorA * 2);
