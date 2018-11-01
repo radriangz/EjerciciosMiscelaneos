@@ -21,7 +21,7 @@ public class Ejercicio07 {
 		System.out.println("Ingresa un valor numérico para \'c\'");
 		c = Float.parseFloat(scan.nextLine());
 		
-		Raices ecuation = new Raices(a, b, c);
+		Raices ecuation = new Raices(1f, 2f, 3f);
 		ecuation.printResults();
 		System.out.println(ecuation.getDiscriminante());
 		
