@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Ejercicio07 {
 
 	public static void main(String[] args) {
-		float a, b, c;
+		float a;
+		float b;
+		float c;
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("\nResolución de ecuación de segundo grado." + "\n" + "Ingresa un valor numérico para \'a\'");
@@ -20,10 +22,14 @@ public class Ejercicio07 {
 		System.out.println("b = " + b);
 		System.out.println("Ingresa un valor numérico para \'c\'");
 		c = Float.parseFloat(scan.nextLine());
+
+		System.out.println("\na = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c + "\n");
 		
-		Raices ecuation = new Raices(1f, 2f, 3f);
+		Raices ecuation = new Raices(a, b, c);
 		ecuation.printResults();
-		System.out.println(ecuation.getDiscriminante());
+		//System.out.println(ecuation.getDiscriminante());
 		
 		
 		scan.close();
