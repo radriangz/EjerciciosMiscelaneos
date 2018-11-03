@@ -14,7 +14,7 @@ public class Ejercicio06 {
 		for (int i = 0; i < 10; i++) {
 			listDeLibros.add(new Libro());
 			listDeLibros.get(i).setTitulo(Utilidades.generateRandomTitle(2));
-			listDeLibros.get(i).setAutor(Utilidades.generateRandomName());
+			listDeLibros.get(i).setAutor(Utilidades.generateRandomName(""));
 			listDeLibros.get(i).setIsbn(listDeLibros.get(i).getAutor() +"-" + String.valueOf(Utilidades.generateRamdomFloat(6, 6)));
 			listDeLibros.get(i).setNumeroDePaginas(Utilidades.generateRandomInt(150, 50));
 		}

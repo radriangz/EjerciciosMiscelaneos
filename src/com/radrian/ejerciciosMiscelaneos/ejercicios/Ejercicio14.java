@@ -33,7 +33,7 @@ public class Ejercicio14 {
 		float valorC = Float.parseFloat(sc.nextLine());
 
 		float negB = valorB * -1f;
-		float squareRootB = (float) Math.pow(valorB, valorB);//valorB * valorB;
+		float squareRootB = (float) Math.pow(valorB, 2);
 		float valor4ac = (valorA * valorC) * 4;
 		float b24ac = (squareRootB - valor4ac);
 		double raiz = Math.pow(b24ac, 0.5);

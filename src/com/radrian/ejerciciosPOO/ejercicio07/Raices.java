@@ -26,7 +26,7 @@ public class Raices {
 
 	public void executeCalc() {
 		float negB = calcNegativeB();
-		discriminante =calcDiscriminante();
+		discriminante = calcDiscriminante();
 		x1 = calcX1(negB);
 		x2 = calcX2(negB);
 	}
@@ -42,7 +42,7 @@ public class Raices {
 	 * Calculates the discriminante [((b^2)-(4*a*c))].
 	 */
 	private float calcDiscriminante() {
-		return (float) Math.pow((Math.pow(b, 2) - ((a * c) * 4)), 0.5);  
+		return (float) Math.pow((Math.pow(b, 2) - ((a * c) * 4)), 0.5);
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class Raices {
 	 */
 	private float calcX1(float negB) {
 		return ((negB + discriminante) / (a * 2));
-		}
+	}
 
 	/**
 	 * Calculates the value of x2. Uses the negative discriminante
@@ -65,9 +65,7 @@ public class Raices {
 	 */
 	public void printRaices() {
 		if (hasRaices()) {
-			System.out.println("Tiene dos soluciones.\n" + 
-								"x1 = " + String.valueOf(x1) + 
-								"\nx2 = " + String.valueOf(x2));
+			System.out.println("Tiene dos soluciones.\n" + "x1 = " + String.valueOf(x1) + "\nx2 = " + String.valueOf(x2));
 		}
 	}
 
@@ -76,9 +74,8 @@ public class Raices {
 	 */
 	public void printRaiz() {
 		if (hasRaiz()) {
-			System.out.println("Solo tiene una solución.\n" + 
-								"x1 y x2 = " + String.valueOf(x1));
-		} else if (!hasRaiz() && !hasRaices()){
+			System.out.println("Solo tiene una solución.\n" + "x1 y x2 = " + String.valueOf(x1));
+		} else if (!hasRaiz() && !hasRaices()) {
 			System.out.println("La ecuación no tiene una solución real.");
 			System.out.println("La discriminante tiene un valor negativo.");
 		}
